@@ -1,19 +1,14 @@
 function gradingStudents(grades) {
   // Write your code here
-  console.log(grades)
 
-  const newGrades = grades.map(check)
+  return grades.map(check);
 
-  function check(element){
-    const multiple = (Math.ceil(element/5)*5)
-    console.log(element, multiple)
+  function check(grade){
+    if (grade < 38) return grade;
 
-    if (element < 38) return element
-    if ((multiple - element) < 3) return multiple
-    return element
-  }
+    const multiple = (Math.ceil(grade/5)*5);
+    return ((multiple - grade) < 3) ? multiple : grade;
+  };
+};
 
-  return newGrades
-}
-
-gradingStudents([4, 73, 67, 38, 33])
+console.log(gradingStudents([4, 73, 67, 38, 33]));
