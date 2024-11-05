@@ -25,8 +25,8 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
     if (element >= s && element <= t) return element;
   });
 
-  console.log(orangesFiltered.length);
   console.log(applesFiltered.length);
+  console.log(orangesFiltered.length);
 }
 
 countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
